@@ -5,7 +5,14 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(Klausur
+add_executable(Optimiert
         Klausur03NOV2018.cpp
         KlausurUtils.cpp
-        KlausurUtils.h)
+        KlausurUtils.h
+        )
+
+add_executable(Abgabe
+        KlausurAbgabe.cpp
+        KlausurUtils.cpp
+        KlausurUtils.h
+        )

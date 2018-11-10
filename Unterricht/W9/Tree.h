@@ -12,9 +12,13 @@ private:
     Node* root = nullptr;
     void insert (int value, Node* n);
     void printInOrder(Node* n);
+    void printPreOrder(Node* n);
+    void printPostOrder(Node* n);
 public:
     void insert(int value);
     void printInOrder();
+    void printPreOrder();
+    void printPostOrder();
 };
 
 

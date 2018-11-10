@@ -1,10 +1,9 @@
 #include <iostream>
 #include <random>
-#include <ctime>
 #include "Tree.h"
 
 int ran() {
-    std::mt19937_64 gen(clock());
+    std::mt19937_64                    gen(clock());
     std::uniform_int_distribution<int> ran(0, 1000);
     return ran(gen);
 }
@@ -18,7 +17,17 @@ int main() {
         tree.insert(values[i]);
     }
 
+    std::cout << "Pre-Order:" << std::endl;
+    tree.printPreOrder();
+    std::cout << std::endl;
+
+    std::cout << "In-Order:" << std::endl;
     tree.printInOrder();
+    std::cout << std::endl;
+
+    std::cout << "Post-Order:" << std::endl;
+    tree.printPostOrder();
+    std::cout << std::endl;
 
     return 0;
 }

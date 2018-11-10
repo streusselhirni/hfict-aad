@@ -44,6 +44,26 @@ void Tree::printInOrder() {
 
 void Tree::printInOrder(Node* n) {
     if (n->left != nullptr) this->printInOrder(n->left);
+    std::cout << std::setw(4) << n->data;
     if (n->right != nullptr) this->printInOrder(n->right);
+}
+
+void Tree::printPreOrder() {
+    if (this->root != nullptr) this->printPreOrder(this->root);
+}
+
+void Tree::printPreOrder(Node* n) {
+    std::cout << std::setw(4) << n->data;
+    if (n->left != nullptr) this->printPreOrder(n->left);
+    if (n->right != nullptr) this->printPreOrder(n->right);
+}
+
+void Tree::printPostOrder() {
+    if (this->root != nullptr) this->printPostOrder(this->root);
+}
+
+void Tree::printPostOrder(Node* n) {
+    if (n->left != nullptr) this->printPostOrder(n->left);
+    if (n->right != nullptr) this->printPostOrder(n->right);
     std::cout << std::setw(4) << n->data;
 }

@@ -1,0 +1,53 @@
+## Erklärung zu Yannick's Ansatz
+Im Array biggestToRight wird immer die größte Zahl, die rechts vom aktuellen Index kommt
+abgespeichert. Dazu wird geschaut, ob die Zahl im nächsthöheren Share-Index größer ist, als
+die Zahl, die bisher im biggestToRight gespeichert war.
+
+### Initial (size = 10)
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 0 0 0 0 0 0
+
+#### 1. Durchlauf: i = 8
+                                    v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 0 0 0 0 1 0
+
+#### 2. Durchlauf: i = 7
+                                  v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 0 0 0 2 1 0
+
+#### 3. Durchlauf: i = 6
+                                v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 0 0 2 2 1 0
+
+#### 4. Durchlauf: i = 5
+                              v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 0 2 2 2 1 0
+
+#### 5. Durchlauf: i = 4
+                            v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 0 2 2 2 2 1 0
+
+#### 6. Durchlauf: i = 3
+                          v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 0 4 2 2 2 2 1 0
+
+#### 7. Durchlauf: i = 2
+                        v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 0 4 4 2 2 2 2 1 0
+
+#### 8. Durchlauf: i = 1
+                      v
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     0 4 4 4 2 2 2 2 1 0
+
+#### 9. Durchlauf: i = 0
+
+Share-Array:        1 3 2 1 4 2 1 1 2 1
+biggestToRight:     4 4 4 4 2 2 2 2 1 0

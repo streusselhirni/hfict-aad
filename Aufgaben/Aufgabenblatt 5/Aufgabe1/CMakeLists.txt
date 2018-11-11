@@ -3,4 +3,4 @@ project(Woche_9_und_10)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Aufgabe1 main.cpp)
+add_executable(Aufgabe1 main.cpp BinaryTree.h BinaryTree.cpp)

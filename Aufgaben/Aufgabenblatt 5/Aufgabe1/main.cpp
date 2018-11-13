@@ -11,6 +11,7 @@ int main() {
     delete p;
     std::cout << p << std::endl;
 
+    p->data = 10;
 
     BinaryTree t;
 

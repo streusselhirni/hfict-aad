@@ -15,8 +15,8 @@ static const bool EXECUTE_PERFORMANCE_TEST_AUFGABE1 = true;
 int getDataAufgabe1(int idx);
 int getDataAufgabe3(int idx);
 
-string aufgabe1_data = "Aufgabe1.dat";
-string aufgabe1_samples = "Aufgabe1_Samples.dat";
+string aufgabe1_data = "Korrektur_Aufgabe1.dat";
+string aufgabe1_samples = "Korrektur_Aufgabe1_Samples.dat";
 string aufgabe2_data = "Aufgabe2.dat";
 string aufgabe2_results = "Aufgabe2_Results.dat";
 string aufgabe3_data = "Aufgabe3.dat";

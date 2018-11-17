@@ -7,11 +7,25 @@
 int main() {
     Node* p = new Node();
     p->data = 5;
-    std::cout << p << std::endl;
+    std::cout << p->data << std::endl;
     delete p;
-    std::cout << p << std::endl;
-
+    std::cout << p->data << std::endl;
     p->data = 10;
+    std::cout << p->data << std::endl;
+
+    int *test = new int[5];
+    for (int i = 0; i < 5; i++) {
+        test[i] = i;
+    }
+    for (int i = 0; i < 5; i++) {
+        std::cout << test[i] << ", ";
+    }
+    delete []test;
+    for (int i = 0; i < 5; i++) {
+        std::cout << test[i] << ", ";
+    }
+
+
 
     BinaryTree t;
 

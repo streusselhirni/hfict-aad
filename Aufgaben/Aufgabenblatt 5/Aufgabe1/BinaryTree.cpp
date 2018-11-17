@@ -125,9 +125,8 @@ void BinaryTree::remove(int value, Node* n) {
 //            }
 //        }
 //    }
-    else {}
-    {
-        this->remove(value, n->left);
-        this->remove(value, n->right);
-    }
+//    else {
+//        this->remove(value, n->left);
+//        this->remove(value, n->right);
+//    }
 }

@@ -3,6 +3,4 @@ project(Aufgabenblatt_5)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(Aufgabe1)
-add_subdirectory(Aufgabe2)
-add_subdirectory(Aufgabe3)
+add_executable(Aufgabe3 main.cpp TreeUtil.cpp TreeUtil.h)

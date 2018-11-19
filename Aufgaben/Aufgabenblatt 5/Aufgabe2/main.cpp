@@ -2,6 +2,7 @@
 // Created by Nicolas Haenni on 13.11.18.
 //
 #include <iostream>
+#include <climits>
 #include <iomanip>
 #include <vector>
 #include "TreeUtil.h"

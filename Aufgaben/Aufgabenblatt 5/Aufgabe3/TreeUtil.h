@@ -9,6 +9,7 @@
 
 class TreeUtil {
 public:
+    static void printMaximumPathGreedy(std::vector<int> values);
     static void printMaximumPath(std::vector<int> values);
 };
 

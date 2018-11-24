@@ -11,7 +11,7 @@ int main (int argc, char **argv) {
     // Values to demonstrate that this is a greedy algorithm
     std::vector<int> values = {40, 100, 200, 20, 40, 70, 80, 500, 10};
 
-    TreeUtil::printMaximumPath(values);
+    TreeUtil::printMaximumPathGreedy(values);
 
     return 0;
 }

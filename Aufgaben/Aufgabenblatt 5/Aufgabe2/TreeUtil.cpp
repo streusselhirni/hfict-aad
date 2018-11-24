@@ -15,17 +15,14 @@ bool TreeUtil::isBinarySearchTree(std::vector<int> values, int idx, int min, int
      * Node.left muss immer kleiner sein als Node
      */
 
-
-    // Abbruchbedingung: Check if there are children
     int left = idx * 2 + 1;
     int right = idx * 2 + 2;
-    if (right > values.size() - 1) return true;
+
     if (left > values.size() - 1) return true;
+    if (values[left] < min || values[left] > values[idx]) return false;
 
-
-    // Vergleiche mit min/max
-    if (values[left] < min) return false;
-    if (values[right] > max) return false;
+    if (right > values.size() - 1) return true;
+    if (values[right] > max || values[right] < values[idx]) return false;
 
     return (isBinarySearchTree(values, left, min, values[idx]) && isBinarySearchTree(values, right, values[idx], max));
 }

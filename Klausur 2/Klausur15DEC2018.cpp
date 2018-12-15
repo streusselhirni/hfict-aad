@@ -55,7 +55,7 @@ string methodeAufgabe2(int idx) {
 }
 
 // Source of this function: Lecture with D. Herzig
-void bfs(vector<vector<int>> g, vector<int>& result, int next, vector<int>& visited) {
+void bfs(vector<vector<int>> g, vector<int>& result, int next) {
     // Cancel if next node would be out of bounds
     if (next >= result.size()) {
         return;
@@ -67,12 +67,9 @@ void bfs(vector<vector<int>> g, vector<int>& result, int next, vector<int>& visi
         if (find(result.begin(), result.end(), n) == result.end()) {
             // Add it to result of bfs traversal
             result.push_back(n);
-            // Also keep track that is has been visited (the reference array visited is not cleared
-            // between calls
-            visited.push_back(n);
         }
     }
-    bfs(g, result, ++next, visited);
+    bfs(g, result, ++next);
 }
 
 vector<int> methodeAufgabe3(vector<vector<int>>& data) {
@@ -86,15 +83,19 @@ vector<int> methodeAufgabe3(vector<vector<int>>& data) {
     while (idx < data.size()) {
         // If we have not yes visited idx and current node has neighbours
         if (find(visited.begin(), visited.end(), idx) == visited.end() && data.at(idx).size() > 0) {
+            // Add current node to visited nodes
+            visited.push_back(idx);
             // Initialize vector to store temporary result for bfs
             vector<int> res;
             // Push initial node
-            res.push_back(data.at(idx).at(0));
+            res.push_back(idx);
             // Run bfs, result is stored in res
-            bfs(data, res, 0, visited);
+            bfs(data, res, 0);
+            // Add nodes which have been visited during bfs to visited vector
+            visited.insert(visited.end(), res.begin(), res.end());
             // Check if result of bfs is bigger then the last bfs results
             // If yes, store it
-            if (res.size() >= subSize) {
+            if (res.size() > subSize) {
                 subSize  = res.size();
                 subGraph = res;
             }
@@ -103,7 +104,6 @@ vector<int> methodeAufgabe3(vector<vector<int>>& data) {
         // Increment index to continue
         idx++;
     }
-
 
     return subGraph; // REPLACE WITH CORRECT RETURN COMMAND
 }
